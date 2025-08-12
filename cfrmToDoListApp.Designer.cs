@@ -29,7 +29,7 @@ namespace ToDoList
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tcDays = new System.Windows.Forms.TabControl();
             this.tpSunday = new System.Windows.Forms.TabPage();
             this.tpMonday = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
@@ -42,26 +42,34 @@ namespace ToDoList
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.tabControl1.SuspendLayout();
+            this.grpbxLists = new System.Windows.Forms.GroupBox();
+            this.rtbxToDo = new System.Windows.Forms.RichTextBox();
+            this.rtbxCompletedTasks = new System.Windows.Forms.RichTextBox();
+            this.lblTaskToDo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tcDays.SuspendLayout();
+            this.tpSunday.SuspendLayout();
+            this.grpbxLists.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tcDays
             // 
-            this.tabControl1.Controls.Add(this.tpSunday);
-            this.tabControl1.Controls.Add(this.tpMonday);
-            this.tabControl1.Controls.Add(this.tpTuesday);
-            this.tabControl1.Controls.Add(this.tpWednesday);
-            this.tabControl1.Controls.Add(this.tpThursday);
-            this.tabControl1.Controls.Add(this.tpFriday);
-            this.tabControl1.Controls.Add(this.tpSaturday);
-            this.tabControl1.Location = new System.Drawing.Point(1, 1);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(721, 479);
-            this.tabControl1.TabIndex = 0;
+            this.tcDays.Controls.Add(this.tpSunday);
+            this.tcDays.Controls.Add(this.tpMonday);
+            this.tcDays.Controls.Add(this.tpTuesday);
+            this.tcDays.Controls.Add(this.tpWednesday);
+            this.tcDays.Controls.Add(this.tpThursday);
+            this.tcDays.Controls.Add(this.tpFriday);
+            this.tcDays.Controls.Add(this.tpSaturday);
+            this.tcDays.Location = new System.Drawing.Point(1, 1);
+            this.tcDays.Name = "tcDays";
+            this.tcDays.SelectedIndex = 0;
+            this.tcDays.Size = new System.Drawing.Size(721, 479);
+            this.tcDays.TabIndex = 0;
             // 
             // tpSunday
             // 
+            this.tpSunday.Controls.Add(this.grpbxLists);
             this.tpSunday.Location = new System.Drawing.Point(4, 25);
             this.tpSunday.Name = "tpSunday";
             this.tpSunday.Padding = new System.Windows.Forms.Padding(3);
@@ -170,6 +178,52 @@ namespace ToDoList
             this.button5.Text = "button5";
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // grpbxLists
+            // 
+            this.grpbxLists.Controls.Add(this.label1);
+            this.grpbxLists.Controls.Add(this.lblTaskToDo);
+            this.grpbxLists.Controls.Add(this.rtbxCompletedTasks);
+            this.grpbxLists.Controls.Add(this.rtbxToDo);
+            this.grpbxLists.Location = new System.Drawing.Point(7, 0);
+            this.grpbxLists.Name = "grpbxLists";
+            this.grpbxLists.Size = new System.Drawing.Size(706, 450);
+            this.grpbxLists.TabIndex = 0;
+            this.grpbxLists.TabStop = false;
+            // 
+            // rtbxToDo
+            // 
+            this.rtbxToDo.Location = new System.Drawing.Point(19, 41);
+            this.rtbxToDo.Name = "rtbxToDo";
+            this.rtbxToDo.Size = new System.Drawing.Size(299, 276);
+            this.rtbxToDo.TabIndex = 0;
+            this.rtbxToDo.Text = "";
+            // 
+            // rtbxCompletedTasks
+            // 
+            this.rtbxCompletedTasks.Location = new System.Drawing.Point(362, 41);
+            this.rtbxCompletedTasks.Name = "rtbxCompletedTasks";
+            this.rtbxCompletedTasks.Size = new System.Drawing.Size(282, 276);
+            this.rtbxCompletedTasks.TabIndex = 1;
+            this.rtbxCompletedTasks.Text = "";
+            // 
+            // lblTaskToDo
+            // 
+            this.lblTaskToDo.AutoSize = true;
+            this.lblTaskToDo.Location = new System.Drawing.Point(19, 20);
+            this.lblTaskToDo.Name = "lblTaskToDo";
+            this.lblTaskToDo.Size = new System.Drawing.Size(83, 17);
+            this.lblTaskToDo.TabIndex = 2;
+            this.lblTaskToDo.Text = "Task to do: ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(362, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(125, 17);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Completed Tasks: ";
+            // 
             // cfrmToDoList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -180,18 +234,21 @@ namespace ToDoList
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tcDays);
             this.Name = "cfrmToDoList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "What To DO";
-            this.tabControl1.ResumeLayout(false);
+            this.tcDays.ResumeLayout(false);
+            this.tpSunday.ResumeLayout(false);
+            this.grpbxLists.ResumeLayout(false);
+            this.grpbxLists.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tcDays;
         private System.Windows.Forms.TabPage tpSunday;
         private System.Windows.Forms.TabPage tpMonday;
         private System.Windows.Forms.TabPage tpTuesday;
@@ -204,6 +261,11 @@ namespace ToDoList
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.GroupBox grpbxLists;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTaskToDo;
+        private System.Windows.Forms.RichTextBox rtbxCompletedTasks;
+        private System.Windows.Forms.RichTextBox rtbxToDo;
     }
 }
 
