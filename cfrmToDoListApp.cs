@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
+using System.IO;
 
 namespace ToDoList
 {
@@ -42,6 +43,8 @@ namespace ToDoList
             InputForm.Show();
             
             
+            
+            
         }
         public  void DisplayTask(string task, DateTime _DueDate)
         {
@@ -51,6 +54,7 @@ namespace ToDoList
                 case 0:
                     {
                         rtbxToDo.Text += task.PadRight(TaskWidth) + _DueDate.ToShortDateString() + "\n";
+                        AddRecord(task,_DueDate,false);
                         break;
                     }
                 case 1:
@@ -92,6 +96,41 @@ namespace ToDoList
 
            
         }
-        
+
+        private void btnTaskDone_Click(object sender, EventArgs e)
+        {
+            string sFind = Interaction.InputBox("What task have you completed:", "Task Complition");
+            int iLen = sFind.Length;
+            int ifind = rtbxToDo.Find(sFind);
+            rtbxToDo.Select(ifind,35);
+            rtbxToDo.SelectionFont = new Font( rtbxToDo.SelectionFont ?? rtbxToDo.Font, FontStyle.Strikeout);
+            rtbxToDo.Text[ifind].ToString();
+            
+
+             
+        }
+
+        public static void AddRecord(string _Task, DateTime _DueDate, Boolean _bFlag)
+        {
+            try
+            {
+                //string path = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), @"../../Infor.txt"));
+                
+                if (!File.Exists(path))
+                {
+                    using (File.Create(path)) { }
+                }
+                using (StreamWriter TaskLists = new StreamWriter(path, true))
+                {
+                    TaskLists.WriteLine(_Task + "@" + _DueDate + "#" + _bFlag);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new ApplicationException("Nope",ex);
+            }
+
+        }
     }
 }
