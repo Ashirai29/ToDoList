@@ -1,0 +1,145 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
+namespace ToDoList
+{
+    public class cTaskManagment
+    {
+        string path = @"C:\Users\AAHla\Documents\CraftCode Studios\To Do List\ToDoList\TaskTracker.txt";
+        //StreamWriter swTaskLists = new StreamWriter(@"C:\Users\AAHla\Documents\CraftCode Studios\To Do List\ToDoList\TaskTracker.txt", true);
+        //StreamReader srTaskLists = new StreamReader(@"C:\Users\AAHla\Documents\CraftCode Studios\To Do List\ToDoList\TaskTracker.txt", true);
+        public  void AddRecord(string _Task, DateTime _DueDate, Boolean _bFlag)
+        {
+            try
+            {
+                //string path = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), @"../../Infor.txt"));
+                // string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"C:\Users\AAHla\Documents\CraftCode Studios\To Do List\ToDoList.txt");
+                //string path = @"C:\Users\AAHla\Documents\CraftCode Studios\To Do List\ToDoList\TaskTracker.txt";
+                if (!File.Exists(path))
+                {
+                    using (File.Create(path)) { }
+                }
+                using (StreamWriter swTaskLists = new StreamWriter(path, true))
+                {
+                    if (_bFlag)
+                    {
+                        swTaskLists.WriteLine("T!" + _Task + "@" + _DueDate.ToShortDateString());
+                    }
+                    else
+                    {
+                        swTaskLists.WriteLine("F!"+_Task + "@" + _DueDate.ToShortDateString());
+                    }
+                   
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new ApplicationException("Nope", ex);
+            }
+
+        }
+
+        public /*string*/void  DisplayTask(int iIndex,string task, DateTime _DueDate)//make this call Add to ritch edit method instead of returning a value
+        {
+            int TaskWidth = 25; //for good alignment not dependent on how long or short the task enterd was.
+            string sRecord;
+            switch (iIndex)
+            {
+                case 0:
+                    {
+                       
+                        AddRecord(task, _DueDate, false);
+                        
+                        sRecord = task.PadRight(TaskWidth) + _DueDate.ToShortDateString() + "\n";
+                       
+                        //  AddRecord(task,_DueDate,false);
+                        break;
+                    }
+                case 1:
+                    {
+                        AddRecord(task, _DueDate, false);
+                        sRecord = task.PadRight(TaskWidth) + _DueDate.ToShortDateString() + "\n";
+                        break;
+                    }
+                case 2:
+                    {
+                        AddRecord(task, _DueDate, false);
+                        sRecord = task.PadRight(TaskWidth) + _DueDate.ToShortDateString() + "\n";
+                        break;
+                    }
+                case 3:
+                    {
+                        AddRecord(task, _DueDate, false);
+                        sRecord = task.PadRight(TaskWidth) + _DueDate.ToShortDateString() + "\n";
+                        break;
+                    }
+                case 4:
+                    {
+                        AddRecord(task, _DueDate, false);
+                        sRecord = task.PadRight(TaskWidth) + _DueDate.ToShortDateString() + "\n";
+                        break;
+                    }
+                case 5:
+                    {
+                        AddRecord(task, _DueDate, false);
+                        sRecord = task.PadRight(TaskWidth) + _DueDate.ToShortDateString() + "\n";
+                        break;
+                    }
+                case 6:
+                    {
+                        AddRecord(task, _DueDate, false);
+                        sRecord = task.PadRight(TaskWidth) + _DueDate.ToShortDateString() + "\n";
+                        break;
+                    }
+
+
+                default:
+                    AddRecord(task, _DueDate, false);
+                    sRecord = task.PadRight(TaskWidth) + _DueDate.ToShortDateString() + "\n";
+                    break;
+            }
+
+           // return sRecord;
+        }
+        public void MarkTaskAsDone(string _Task)
+        {
+            try
+            {
+                //string path = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), @"../../Infor.txt"));
+                // string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"C:\Users\AAHla\Documents\CraftCode Studios\To Do List\ToDoList.txt");
+                // string path = @"C:\Users\AAHla\Documents\CraftCode Studios\To Do List\ToDoList\TaskTracker.txt";
+                if (!File.Exists(path))
+                {
+                    using (File.Create(path)) { }
+                }
+                // Read all lines into memory
+                var lines = File.ReadAllLines(path).ToList();
+
+                // Find the task and mark it done
+                for (int i = 0; i < lines.Count; i++)
+                {
+                    if (lines[i].Contains(_Task))
+                    {
+                        lines[i] = "T!" + lines[i].Substring(2); // prepend T! to mark done
+                    }
+                }
+
+                // Write all lines back to the file
+                File.WriteAllLines(path, lines);
+            }
+            catch (Exception ex)
+            {
+
+                throw new ApplicationException("Nope", ex);
+            }
+
+        }
+
+
+    }
+}

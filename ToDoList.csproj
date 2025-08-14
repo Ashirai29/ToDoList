@@ -59,6 +59,7 @@
     <Compile Include="cfrmToDoListApp.Designer.cs">
       <DependentUpon>cfrmToDoListApp.cs</DependentUpon>
     </Compile>
+    <Compile Include="cTaskManagment.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="cfrmTaskInput.resx">

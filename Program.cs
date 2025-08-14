@@ -18,7 +18,8 @@ namespace ToDoList
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new cfrmToDoList());
+            cTaskManagment myTaskManager = new cTaskManagment();// Made it so i can pass the required object below
+            Application.Run(new cfrmToDoList(myTaskManager));
         }
     }
 }

@@ -72,7 +72,7 @@ namespace ToDoList
             this.label12 = new System.Windows.Forms.Label();
             this.richTextBox11 = new System.Windows.Forms.RichTextBox();
             this.richTextBox12 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAddTask = new System.Windows.Forms.Button();
             this.btnTaskDone = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -505,15 +505,15 @@ namespace ToDoList
             this.richTextBox12.TabIndex = 0;
             this.richTextBox12.Text = "";
             // 
-            // button1
+            // btnAddTask
             // 
-            this.button1.Location = new System.Drawing.Point(838, 40);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 40);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Add new task";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAddTask.Location = new System.Drawing.Point(838, 40);
+            this.btnAddTask.Name = "btnAddTask";
+            this.btnAddTask.Size = new System.Drawing.Size(129, 40);
+            this.btnAddTask.TabIndex = 1;
+            this.btnAddTask.Text = "Add new task";
+            this.btnAddTask.UseVisualStyleBackColor = true;
+            this.btnAddTask.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnTaskDone
             // 
@@ -561,7 +561,7 @@ namespace ToDoList
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnTaskDone);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAddTask);
             this.Controls.Add(this.tcDays);
             this.Name = "cfrmToDoList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -602,7 +602,7 @@ namespace ToDoList
         private System.Windows.Forms.TabPage tpThursday;
         private System.Windows.Forms.TabPage tpFriday;
         private System.Windows.Forms.TabPage tpSaturday;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAddTask;
         private System.Windows.Forms.Button btnTaskDone;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
