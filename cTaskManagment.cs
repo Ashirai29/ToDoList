@@ -123,7 +123,8 @@ namespace ToDoList
                 // Find the task and mark it done
                 for (int i = 0; i < lines.Count; i++)
                 {
-                    if (lines[i].Contains(_Task))
+                    string sCompare = lines[i].ToUpper();
+                    if (sCompare.Contains(_Task.ToUpper()))//Ensuring that task can still be recognized if written in different casing
                     {
                         lines[i] = "T!" + lines[i].Substring(2); // prepend T! to mark done
                     }
@@ -139,6 +140,33 @@ namespace ToDoList
             }
 
         }
+        public void DeleteTask(string _task)
+        {
+            if (File.Exists(path))
+            {
+                // Read all lines into a list
+                var lines = File.ReadAllLines(path).ToList();
+
+                // Remove only the line where the task name before the '@' matches exactly
+                lines.RemoveAll(line =>
+                {
+                    // Ensure the line is in the correct format
+                    if (!line.Contains("@") || line.Length < 3)// A safety check so the code doesn’t crash if the file has An empty line;; A line without @ in it ;A line too short to even have the F!or T! prefix
+                        return false;
+                   
+
+                    // Remove the F! or T! prefix
+                    string taskName = line.Split('@')[0].Substring(2);
+
+                    // Compare task name with the given one (case-insensitive)
+                    return taskName.Equals(_task, StringComparison.OrdinalIgnoreCase);
+                });
+
+                // Write updated list back to the file
+                File.WriteAllLines(path, lines);
+            }
+        }
+
 
 
     }

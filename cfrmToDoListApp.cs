@@ -27,7 +27,7 @@ namespace ToDoList
             InitializeComponent();
             ManageTask = _ManageTask;
             //rtbxToDo.Text = "Task:".PadRight(25)+"Due Date:\n=======================================\n";
-            rtbxCompletedTasks.Text = "Task:\t\t\tDate Done:\n==================================\n";
+            //rtbxCompletedTasks.Text = "Task:\t\t\tDate Done:\n==================================\n";
             LoadTasksIntoRichTextBox();
         }
 
@@ -67,13 +67,27 @@ namespace ToDoList
             // int iTxtFileFind = 
             ManageTask.MarkTaskAsDone(sFind);
             LoadTasksIntoRichTextBox();
-           // int ifind = rtbxToDo.Find(sFind);
-            //rtbxToDo.Select(ifind,35);
-           // rtbxToDo.SelectionFont = new Font( rtbxToDo.SelectionFont ?? rtbxToDo.Font, FontStyle.Strikeout);
-           // rtbxToDo.Text[ifind].ToString();
-            
+            string imagePath = Path.Combine(Application.StartupPath, "images", "sleepy.jpg");
 
-             
+            if (File.Exists(imagePath))
+            {
+                pbxProcess.Image = Image.FromFile(imagePath);
+                pbxProcess.SizeMode = PictureBoxSizeMode.Zoom; // keeps aspect ratio
+                pbxProcess.AutoSize = false; // prevents resizing
+            }
+            else
+            {
+                MessageBox.Show("Image not found at: " + imagePath);
+            }
+
+
+            // int ifind = rtbxToDo.Find(sFind);
+            //rtbxToDo.Select(ifind,35);
+            // rtbxToDo.SelectionFont = new Font( rtbxToDo.SelectionFont ?? rtbxToDo.Font, FontStyle.Strikeout);
+            // rtbxToDo.Text[ifind].ToString();
+
+
+
         }
         public void LoadTasksIntoRichTextBox()
         {
@@ -85,23 +99,35 @@ namespace ToDoList
             }
 
             rtbxToDo.Clear();
-            rtbxToDo.Text = "Task:".PadRight(25) + "Due Date:\n=======================================\n";
+            rtbxToDo.Text = "Task:".PadRight(25) + "Due Date:\n====================================\n";
+            rtbxCompletedTasks.Clear();
+            rtbxCompletedTasks.Text = "Task:".PadRight(25)+ "Date Done:\n==================================\n";
+            int iLineCount = 0;
+            int iTrueCount = 0;
+            int iFalseCount = 0;
             foreach (string line in File.ReadAllLines(path))
             {
+                iLineCount++;
                 if (line.StartsWith("T!"))
                 {
+                    
                     // Remove the "T!" tag before displaying
                     string displayLine = line.Substring(2);
                     string sTask = displayLine.Substring(0, line.IndexOf('@')-2);
                     string sDate = displayLine.Substring(line.IndexOf('@') - 1);
-                    
+                    rtbxCompletedTasks.AppendText(sTask.PadRight(25) + sDate + Environment.NewLine);
                     // Apply strikethrough formatting
+                    rtbxToDo.SelectionStart = rtbxToDo.TextLength; // move cursor to the end of the line
                     rtbxToDo.SelectionFont = new Font(rtbxToDo.Font, FontStyle.Strikeout);
                     rtbxToDo.AppendText(sTask.PadRight(25)+sDate + Environment.NewLine);
                     rtbxToDo.SelectionFont = rtbxToDo.Font; // reset to normal for next line
+                   // iLineCount++;
+                    iTrueCount++;
                 }
                 else if (line.StartsWith("F!"))
                 {
+                   
+                    iFalseCount++;
                     // Remove the "F!" tag before displaying
                     string displayLine = line.Substring(2);
                     string sTask = displayLine.Substring(0, line.IndexOf('@') - 2);
@@ -109,11 +135,33 @@ namespace ToDoList
                     // Display normally
                     rtbxToDo.SelectionFont = new Font(rtbxToDo.Font, FontStyle.Regular);
                     rtbxToDo.AppendText(sTask.PadRight(25) + sDate + Environment.NewLine);
-                }
+                }                          
+                
+            
+               
+            }
+            double dProgress = ((double)iTrueCount / iLineCount) * 100;
+
+            if (dProgress == 100)
+            {
+                pbrProgress.Value = 100;
+                //MessageBox.Show($"True: {iTrueCount}, Total: {iLineCount}, Progress: {dProgress}");// Was used for debbuging purposes, iTrueCount& iLineCount were constantly 
+                 
+            }
+            else if (dProgress > 99)
+            {
+                pbrProgress.Value = 99;
+            }
+            else
+            {
+                pbrProgress.Value = (int)dProgress;
             }
         }
 
-
-
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            ManageTask.DeleteTask(Interaction.InputBox("What task are you deleting:", "Delete a task"));
+            LoadTasksIntoRichTextBox();
+        }
     }
 }

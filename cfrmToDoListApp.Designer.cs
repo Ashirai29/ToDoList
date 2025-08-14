@@ -32,6 +32,8 @@ namespace ToDoList
             this.tcDays = new System.Windows.Forms.TabControl();
             this.tpSunday = new System.Windows.Forms.TabPage();
             this.grpbxLists = new System.Windows.Forms.GroupBox();
+            this.pbxProcess = new System.Windows.Forms.PictureBox();
+            this.pbrProgress = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTaskToDo = new System.Windows.Forms.Label();
             this.rtbxCompletedTasks = new System.Windows.Forms.RichTextBox();
@@ -74,12 +76,13 @@ namespace ToDoList
             this.richTextBox12 = new System.Windows.Forms.RichTextBox();
             this.btnAddTask = new System.Windows.Forms.Button();
             this.btnTaskDone = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.tcDays.SuspendLayout();
             this.tpSunday.SuspendLayout();
             this.grpbxLists.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxProcess)).BeginInit();
             this.tpMonday.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tpTuesday.SuspendLayout();
@@ -123,6 +126,8 @@ namespace ToDoList
             // 
             // grpbxLists
             // 
+            this.grpbxLists.Controls.Add(this.pbxProcess);
+            this.grpbxLists.Controls.Add(this.pbrProgress);
             this.grpbxLists.Controls.Add(this.label1);
             this.grpbxLists.Controls.Add(this.lblTaskToDo);
             this.grpbxLists.Controls.Add(this.rtbxCompletedTasks);
@@ -133,10 +138,28 @@ namespace ToDoList
             this.grpbxLists.TabIndex = 0;
             this.grpbxLists.TabStop = false;
             // 
+            // pbxProcess
+            // 
+            this.pbxProcess.Image = global::ToDoList.Properties.Resources.sleepy1;
+            this.pbxProcess.Location = new System.Drawing.Point(615, 323);
+            this.pbxProcess.Name = "pbxProcess";
+            this.pbxProcess.Size = new System.Drawing.Size(124, 126);
+            this.pbxProcess.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxProcess.TabIndex = 5;
+            this.pbxProcess.TabStop = false;
+            // 
+            // pbrProgress
+            // 
+            this.pbrProgress.Location = new System.Drawing.Point(17, 375);
+            this.pbrProgress.Name = "pbrProgress";
+            this.pbrProgress.Size = new System.Drawing.Size(535, 37);
+            this.pbrProgress.TabIndex = 4;
+            this.pbrProgress.Value = 99;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(447, 18);
+            this.label1.Location = new System.Drawing.Point(436, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 17);
             this.label1.TabIndex = 3;
@@ -153,9 +176,10 @@ namespace ToDoList
             // 
             // rtbxCompletedTasks
             // 
-            this.rtbxCompletedTasks.Location = new System.Drawing.Point(447, 41);
+            this.rtbxCompletedTasks.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbxCompletedTasks.Location = new System.Drawing.Point(436, 41);
             this.rtbxCompletedTasks.Name = "rtbxCompletedTasks";
-            this.rtbxCompletedTasks.Size = new System.Drawing.Size(348, 276);
+            this.rtbxCompletedTasks.Size = new System.Drawing.Size(359, 276);
             this.rtbxCompletedTasks.TabIndex = 1;
             this.rtbxCompletedTasks.Text = "";
             // 
@@ -525,14 +549,15 @@ namespace ToDoList
             this.btnTaskDone.UseVisualStyleBackColor = true;
             this.btnTaskDone.Click += new System.EventHandler(this.btnTaskDone_Click);
             // 
-            // button3
+            // btnDelete
             // 
-            this.button3.Location = new System.Drawing.Point(838, 169);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(129, 40);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnDelete.Location = new System.Drawing.Point(838, 169);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(129, 40);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "Delete a task";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // button4
             // 
@@ -559,7 +584,7 @@ namespace ToDoList
             this.ClientSize = new System.Drawing.Size(1064, 577);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnTaskDone);
             this.Controls.Add(this.btnAddTask);
             this.Controls.Add(this.tcDays);
@@ -570,6 +595,7 @@ namespace ToDoList
             this.tpSunday.ResumeLayout(false);
             this.grpbxLists.ResumeLayout(false);
             this.grpbxLists.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxProcess)).EndInit();
             this.tpMonday.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -604,7 +630,7 @@ namespace ToDoList
         private System.Windows.Forms.TabPage tpSaturday;
         private System.Windows.Forms.Button btnAddTask;
         private System.Windows.Forms.Button btnTaskDone;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.GroupBox grpbxLists;
@@ -642,6 +668,8 @@ namespace ToDoList
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.RichTextBox richTextBox11;
         private System.Windows.Forms.RichTextBox richTextBox12;
+        private System.Windows.Forms.PictureBox pbxProcess;
+        private System.Windows.Forms.ProgressBar pbrProgress;
     }
 }
 
