@@ -36,14 +36,14 @@ namespace ToDoList
             this.pbrProgress = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTaskToDo = new System.Windows.Forms.Label();
-            this.rtbxCompletedTasks = new System.Windows.Forms.RichTextBox();
-            this.rtbxToDo = new System.Windows.Forms.RichTextBox();
+            this.rtbxSundayCompletedTasks = new System.Windows.Forms.RichTextBox();
+            this.rtbxSundayToDo = new System.Windows.Forms.RichTextBox();
             this.tpMonday = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblMonToDo = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.rtbxMondayToDo = new System.Windows.Forms.RichTextBox();
             this.tpTuesday = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -79,6 +79,7 @@ namespace ToDoList
             this.btnDelete = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.lblWellDone = new System.Windows.Forms.Label();
             this.tcDays.SuspendLayout();
             this.tpSunday.SuspendLayout();
             this.grpbxLists.SuspendLayout();
@@ -130,8 +131,8 @@ namespace ToDoList
             this.grpbxLists.Controls.Add(this.pbrProgress);
             this.grpbxLists.Controls.Add(this.label1);
             this.grpbxLists.Controls.Add(this.lblTaskToDo);
-            this.grpbxLists.Controls.Add(this.rtbxCompletedTasks);
-            this.grpbxLists.Controls.Add(this.rtbxToDo);
+            this.grpbxLists.Controls.Add(this.rtbxSundayCompletedTasks);
+            this.grpbxLists.Controls.Add(this.rtbxSundayToDo);
             this.grpbxLists.Location = new System.Drawing.Point(5, 0);
             this.grpbxLists.Name = "grpbxLists";
             this.grpbxLists.Size = new System.Drawing.Size(801, 454);
@@ -174,23 +175,23 @@ namespace ToDoList
             this.lblTaskToDo.TabIndex = 2;
             this.lblTaskToDo.Text = "Task to do: ";
             // 
-            // rtbxCompletedTasks
+            // rtbxSundayCompletedTasks
             // 
-            this.rtbxCompletedTasks.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbxCompletedTasks.Location = new System.Drawing.Point(436, 41);
-            this.rtbxCompletedTasks.Name = "rtbxCompletedTasks";
-            this.rtbxCompletedTasks.Size = new System.Drawing.Size(359, 276);
-            this.rtbxCompletedTasks.TabIndex = 1;
-            this.rtbxCompletedTasks.Text = "";
+            this.rtbxSundayCompletedTasks.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbxSundayCompletedTasks.Location = new System.Drawing.Point(436, 41);
+            this.rtbxSundayCompletedTasks.Name = "rtbxSundayCompletedTasks";
+            this.rtbxSundayCompletedTasks.Size = new System.Drawing.Size(359, 276);
+            this.rtbxSundayCompletedTasks.TabIndex = 1;
+            this.rtbxSundayCompletedTasks.Text = "";
             // 
-            // rtbxToDo
+            // rtbxSundayToDo
             // 
-            this.rtbxToDo.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbxToDo.Location = new System.Drawing.Point(17, 41);
-            this.rtbxToDo.Name = "rtbxToDo";
-            this.rtbxToDo.Size = new System.Drawing.Size(371, 276);
-            this.rtbxToDo.TabIndex = 0;
-            this.rtbxToDo.Text = "";
+            this.rtbxSundayToDo.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbxSundayToDo.Location = new System.Drawing.Point(17, 41);
+            this.rtbxSundayToDo.Name = "rtbxSundayToDo";
+            this.rtbxSundayToDo.Size = new System.Drawing.Size(371, 276);
+            this.rtbxSundayToDo.TabIndex = 0;
+            this.rtbxSundayToDo.Text = "";
             // 
             // tpMonday
             // 
@@ -208,7 +209,7 @@ namespace ToDoList
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.lblMonToDo);
             this.groupBox1.Controls.Add(this.richTextBox1);
-            this.groupBox1.Controls.Add(this.richTextBox2);
+            this.groupBox1.Controls.Add(this.rtbxMondayToDo);
             this.groupBox1.Location = new System.Drawing.Point(3, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(706, 450);
@@ -241,13 +242,13 @@ namespace ToDoList
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = "";
             // 
-            // richTextBox2
+            // rtbxMondayToDo
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(19, 41);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(299, 276);
-            this.richTextBox2.TabIndex = 0;
-            this.richTextBox2.Text = "";
+            this.rtbxMondayToDo.Location = new System.Drawing.Point(19, 41);
+            this.rtbxMondayToDo.Name = "rtbxMondayToDo";
+            this.rtbxMondayToDo.Size = new System.Drawing.Size(299, 276);
+            this.rtbxMondayToDo.TabIndex = 0;
+            this.rtbxMondayToDo.Text = "";
             // 
             // tpTuesday
             // 
@@ -577,11 +578,22 @@ namespace ToDoList
             this.button5.Text = "button5";
             this.button5.UseVisualStyleBackColor = true;
             // 
+            // lblWellDone
+            // 
+            this.lblWellDone.AutoSize = true;
+            this.lblWellDone.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWellDone.Location = new System.Drawing.Point(50, 517);
+            this.lblWellDone.Name = "lblWellDone";
+            this.lblWellDone.Size = new System.Drawing.Size(793, 39);
+            this.lblWellDone.TabIndex = 6;
+            this.lblWellDone.Text = "Well Done you have accomplished all your tasks";
+            // 
             // cfrmToDoList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 577);
+            this.Controls.Add(this.lblWellDone);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btnDelete);
@@ -615,6 +627,7 @@ namespace ToDoList
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -636,13 +649,13 @@ namespace ToDoList
         private System.Windows.Forms.GroupBox grpbxLists;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTaskToDo;
-        private System.Windows.Forms.RichTextBox rtbxCompletedTasks;
-        private System.Windows.Forms.RichTextBox rtbxToDo;
+        private System.Windows.Forms.RichTextBox rtbxSundayCompletedTasks;
+        private System.Windows.Forms.RichTextBox rtbxSundayToDo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblMonToDo;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox rtbxMondayToDo;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -670,6 +683,7 @@ namespace ToDoList
         private System.Windows.Forms.RichTextBox richTextBox12;
         private System.Windows.Forms.PictureBox pbxProcess;
         private System.Windows.Forms.ProgressBar pbrProgress;
+        private System.Windows.Forms.Label lblWellDone;
     }
 }
 

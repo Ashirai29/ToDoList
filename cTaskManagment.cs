@@ -9,11 +9,13 @@ namespace ToDoList
 {
     public class cTaskManagment
     {
+        string sDay;
         string path = @"C:\Users\AAHla\Documents\CraftCode Studios\To Do List\ToDoList\TaskTracker.txt";
         //StreamWriter swTaskLists = new StreamWriter(@"C:\Users\AAHla\Documents\CraftCode Studios\To Do List\ToDoList\TaskTracker.txt", true);
         //StreamReader srTaskLists = new StreamReader(@"C:\Users\AAHla\Documents\CraftCode Studios\To Do List\ToDoList\TaskTracker.txt", true);
-        public  void AddRecord(string _Task, DateTime _DueDate, Boolean _bFlag)
+        public  void AddRecord(string _Task, DateTime _DueDate, Boolean _bFlag, int iDay)
         {
+            
             try
             {
                 //string path = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), @"../../Infor.txt"));
@@ -21,17 +23,42 @@ namespace ToDoList
                 //string path = @"C:\Users\AAHla\Documents\CraftCode Studios\To Do List\ToDoList\TaskTracker.txt";
                 if (!File.Exists(path))
                 {
-                    using (File.Create(path)) { }
+                    using (File.Create(path)) {}
+                }
+                
+                switch (iDay)
+                {
+                    case 0: sDay = "Sunday";
+                        break;
+                    case 1:
+                        sDay = "Monday";
+                        break;
+                    case 2:
+                        sDay = "Tuesday";
+                        break;
+                    case 3:
+                        sDay = "Wednesday";
+                        break;
+                    case 4:
+                        sDay = "Thursday";
+                        break;
+                    case 5:
+                        sDay = "Friday";
+                        break;
+                    case 6:
+                        sDay = "Saturday";
+                        break;
+
                 }
                 using (StreamWriter swTaskLists = new StreamWriter(path, true))
                 {
                     if (_bFlag)
                     {
-                        swTaskLists.WriteLine("T!" + _Task + "@" + _DueDate.ToShortDateString());
+                        swTaskLists.WriteLine("T!" + _Task + "@" + _DueDate.ToShortDateString()+ "#" + sDay);
                     }
                     else
                     {
-                        swTaskLists.WriteLine("F!"+_Task + "@" + _DueDate.ToShortDateString());
+                        swTaskLists.WriteLine("F!"+_Task + "@" + _DueDate.ToShortDateString() + "#" + sDay);
                     }
                    
                 }
@@ -53,55 +80,50 @@ namespace ToDoList
                 case 0:
                     {
                        
-                        AddRecord(task, _DueDate, false);
+                        AddRecord(task, _DueDate, false,0);
                         
-                        sRecord = task.PadRight(TaskWidth) + _DueDate.ToShortDateString() + "\n";
+                       // sRecord = task.PadRight(TaskWidth) + _DueDate.ToShortDateString() + "\n"; not needed anymore
                        
                         //  AddRecord(task,_DueDate,false);
                         break;
                     }
                 case 1:
                     {
-                        AddRecord(task, _DueDate, false);
+                        AddRecord(task, _DueDate, false,1);
                         sRecord = task.PadRight(TaskWidth) + _DueDate.ToShortDateString() + "\n";
                         break;
                     }
                 case 2:
                     {
-                        AddRecord(task, _DueDate, false);
+                        AddRecord(task, _DueDate, false,2);
                         sRecord = task.PadRight(TaskWidth) + _DueDate.ToShortDateString() + "\n";
                         break;
                     }
                 case 3:
                     {
-                        AddRecord(task, _DueDate, false);
+                        AddRecord(task, _DueDate, false,3);
                         sRecord = task.PadRight(TaskWidth) + _DueDate.ToShortDateString() + "\n";
                         break;
                     }
                 case 4:
                     {
-                        AddRecord(task, _DueDate, false);
+                        AddRecord(task, _DueDate, false,4);
                         sRecord = task.PadRight(TaskWidth) + _DueDate.ToShortDateString() + "\n";
                         break;
                     }
                 case 5:
                     {
-                        AddRecord(task, _DueDate, false);
+                        AddRecord(task, _DueDate, false,5);
                         sRecord = task.PadRight(TaskWidth) + _DueDate.ToShortDateString() + "\n";
                         break;
                     }
                 case 6:
                     {
-                        AddRecord(task, _DueDate, false);
+                        AddRecord(task, _DueDate, false,6);
                         sRecord = task.PadRight(TaskWidth) + _DueDate.ToShortDateString() + "\n";
                         break;
                     }
-
-
-                default:
-                    AddRecord(task, _DueDate, false);
-                    sRecord = task.PadRight(TaskWidth) + _DueDate.ToShortDateString() + "\n";
-                    break;
+                                    
             }
 
            // return sRecord;
