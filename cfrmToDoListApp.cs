@@ -86,8 +86,8 @@ namespace ToDoList
         public void LoadTasksIntoRichTextBox()
         {
             string path = @"C:\Users\AAHla\Documents\CraftCode Studios\To Do List\ToDoList\TaskTracker.txt";
-            RichTextBox[] dayBoxes = new RichTextBox[2] { rtbxSundayToDo, rtbxMondayToDo };
-            RichTextBox[] TaskDoneBoxes = new RichTextBox[2] { rtbxSundayCompletedTasks, rtbxMondayToDo };
+            RichTextBox[] dayBoxes = new RichTextBox[7] { rtbxSundayToDo, rtbxMondayToDo, rtbxTuesdayToDo, rtbxWednesdayToDo, rtbxThursdayToDo, rtbxFridayToDo, rtbxSaturdayToDo };
+            RichTextBox[] TaskDoneBoxes = new RichTextBox[7] { rtbxSundayCompletedTasks, rtbxMondayCompletedTasks,rtbxTuesdayCompletedTasks,rtbxWednesdayCompletedTasks,rtbxThursdayCompletedTasks,rtbxFridayCompletedTasks,rtbxSaturdayCompletedTasks };
             RichTextBox rtbTD = dayBoxes[0];
             RichTextBox rtbCT = dayBoxes[0];
 
@@ -225,9 +225,9 @@ namespace ToDoList
 
                 if (File.Exists(imagePath))
                 {
-                    pbxProcess.Image = Image.FromFile(imagePath);
-                    pbxProcess.SizeMode = PictureBoxSizeMode.Zoom; // keeps aspect ratio
-                    pbxProcess.AutoSize = false; // prevents resizing
+                    pbxSunday.Image = Image.FromFile(imagePath);
+                    pbxSunday.SizeMode = PictureBoxSizeMode.Zoom; // keeps aspect ratio
+                    pbxSunday.AutoSize = false; // prevents resizing
                 }
                 else
                 {
@@ -242,9 +242,9 @@ namespace ToDoList
 
                 if (File.Exists(imagePath))
                 {
-                    pbxProcess.Image = Image.FromFile(imagePath);
-                    pbxProcess.SizeMode = PictureBoxSizeMode.Zoom; // keeps aspect ratio
-                    pbxProcess.AutoSize = false; // prevents resizing
+                    pbxSunday.Image = Image.FromFile(imagePath);
+                    pbxSunday.SizeMode = PictureBoxSizeMode.Zoom; // keeps aspect ratio
+                    pbxSunday.AutoSize = false; // prevents resizing
                 }
                 else
                 {
@@ -259,9 +259,9 @@ namespace ToDoList
 
                 if (File.Exists(imagePath))
                 {
-                    pbxProcess.Image = Image.FromFile(imagePath);
-                    pbxProcess.SizeMode = PictureBoxSizeMode.Zoom; // keeps aspect ratio
-                    pbxProcess.AutoSize = false; // prevents resizing
+                    pbxSunday.Image = Image.FromFile(imagePath);
+                    pbxSunday.SizeMode = PictureBoxSizeMode.Zoom; // keeps aspect ratio
+                    pbxSunday.AutoSize = false; // prevents resizing
                 }
 
             }
@@ -272,9 +272,9 @@ namespace ToDoList
 
                 if (File.Exists(imagePath))
                 {
-                    pbxProcess.Image = Image.FromFile(imagePath);
-                    pbxProcess.SizeMode = PictureBoxSizeMode.Zoom; // keeps aspect ratio
-                    pbxProcess.AutoSize = false; // prevents resizing
+                    pbxSunday.Image = Image.FromFile(imagePath);
+                    pbxSunday.SizeMode = PictureBoxSizeMode.Zoom; // keeps aspect ratio
+                    pbxSunday.AutoSize = false; // prevents resizing
                 }
             }
             else
@@ -284,9 +284,9 @@ namespace ToDoList
 
                 if (File.Exists(imagePath))
                 {
-                    pbxProcess.Image = Image.FromFile(imagePath);
-                    pbxProcess.SizeMode = PictureBoxSizeMode.Zoom; // keeps aspect ratio
-                    pbxProcess.AutoSize = false; // prevents resizing
+                    pbxSunday.Image = Image.FromFile(imagePath);
+                    pbxSunday.SizeMode = PictureBoxSizeMode.Zoom; // keeps aspect ratio
+                    pbxSunday.AutoSize = false; // prevents resizing
                 }
             }
         }

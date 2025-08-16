@@ -32,7 +32,7 @@ namespace ToDoList
             this.tcDays = new System.Windows.Forms.TabControl();
             this.tpSunday = new System.Windows.Forms.TabPage();
             this.grpbxLists = new System.Windows.Forms.GroupBox();
-            this.pbxProcess = new System.Windows.Forms.PictureBox();
+            this.pbxSunday = new System.Windows.Forms.PictureBox();
             this.pbrProgress = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTaskToDo = new System.Windows.Forms.Label();
@@ -42,51 +42,48 @@ namespace ToDoList
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblMonToDo = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtbxMondayCompletedTasks = new System.Windows.Forms.RichTextBox();
             this.rtbxMondayToDo = new System.Windows.Forms.RichTextBox();
             this.tpTuesday = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.rtbxTuesdayCompletedTasks = new System.Windows.Forms.RichTextBox();
+            this.rtbxTuesdayToDo = new System.Windows.Forms.RichTextBox();
             this.tpWednesday = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
+            this.rtbxWednesdayCompletedTasks = new System.Windows.Forms.RichTextBox();
+            this.rtbxWednesdayToDo = new System.Windows.Forms.RichTextBox();
             this.tpThursday = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.richTextBox7 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox8 = new System.Windows.Forms.RichTextBox();
+            this.rtbxThursdayCompletedTasks = new System.Windows.Forms.RichTextBox();
+            this.rtbxThursdayToDo = new System.Windows.Forms.RichTextBox();
             this.tpFriday = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.richTextBox9 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox10 = new System.Windows.Forms.RichTextBox();
+            this.rtbxFridayCompletedTasks = new System.Windows.Forms.RichTextBox();
+            this.rtbxFridayToDo = new System.Windows.Forms.RichTextBox();
             this.tpSaturday = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.richTextBox11 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox12 = new System.Windows.Forms.RichTextBox();
+            this.rtbxSaturdayCompletedTasks = new System.Windows.Forms.RichTextBox();
+            this.rtbxSaturdayToDo = new System.Windows.Forms.RichTextBox();
             this.btnAddTask = new System.Windows.Forms.Button();
             this.btnTaskDone = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.lblWellDone = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.tcDays.SuspendLayout();
             this.tpSunday.SuspendLayout();
             this.grpbxLists.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxProcess)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSunday)).BeginInit();
             this.tpMonday.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tpTuesday.SuspendLayout();
@@ -130,7 +127,7 @@ namespace ToDoList
             // 
             // grpbxLists
             // 
-            this.grpbxLists.Controls.Add(this.pbxProcess);
+            this.grpbxLists.Controls.Add(this.pbxSunday);
             this.grpbxLists.Controls.Add(this.pbrProgress);
             this.grpbxLists.Controls.Add(this.label1);
             this.grpbxLists.Controls.Add(this.lblTaskToDo);
@@ -142,15 +139,15 @@ namespace ToDoList
             this.grpbxLists.TabIndex = 0;
             this.grpbxLists.TabStop = false;
             // 
-            // pbxProcess
+            // pbxSunday
             // 
-            this.pbxProcess.Image = global::ToDoList.Properties.Resources.sleepy1;
-            this.pbxProcess.Location = new System.Drawing.Point(615, 323);
-            this.pbxProcess.Name = "pbxProcess";
-            this.pbxProcess.Size = new System.Drawing.Size(124, 126);
-            this.pbxProcess.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxProcess.TabIndex = 5;
-            this.pbxProcess.TabStop = false;
+            this.pbxSunday.Image = global::ToDoList.Properties.Resources.sleepy1;
+            this.pbxSunday.Location = new System.Drawing.Point(615, 323);
+            this.pbxSunday.Name = "pbxSunday";
+            this.pbxSunday.Size = new System.Drawing.Size(124, 126);
+            this.pbxSunday.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxSunday.TabIndex = 5;
+            this.pbxSunday.TabStop = false;
             // 
             // pbrProgress
             // 
@@ -183,7 +180,7 @@ namespace ToDoList
             this.rtbxSundayCompletedTasks.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbxSundayCompletedTasks.Location = new System.Drawing.Point(436, 41);
             this.rtbxSundayCompletedTasks.Name = "rtbxSundayCompletedTasks";
-            this.rtbxSundayCompletedTasks.Size = new System.Drawing.Size(359, 276);
+            this.rtbxSundayCompletedTasks.Size = new System.Drawing.Size(338, 276);
             this.rtbxSundayCompletedTasks.TabIndex = 1;
             this.rtbxSundayCompletedTasks.Text = "";
             // 
@@ -211,7 +208,7 @@ namespace ToDoList
             // 
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.lblMonToDo);
-            this.groupBox1.Controls.Add(this.richTextBox1);
+            this.groupBox1.Controls.Add(this.rtbxMondayCompletedTasks);
             this.groupBox1.Controls.Add(this.rtbxMondayToDo);
             this.groupBox1.Location = new System.Drawing.Point(3, 0);
             this.groupBox1.Name = "groupBox1";
@@ -237,13 +234,14 @@ namespace ToDoList
             this.lblMonToDo.TabIndex = 2;
             this.lblMonToDo.Text = "Task to do: ";
             // 
-            // richTextBox1
+            // rtbxMondayCompletedTasks
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(441, 41);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(356, 276);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.rtbxMondayCompletedTasks.Font = new System.Drawing.Font("Consolas", 9F);
+            this.rtbxMondayCompletedTasks.Location = new System.Drawing.Point(441, 41);
+            this.rtbxMondayCompletedTasks.Name = "rtbxMondayCompletedTasks";
+            this.rtbxMondayCompletedTasks.Size = new System.Drawing.Size(335, 276);
+            this.rtbxMondayCompletedTasks.TabIndex = 1;
+            this.rtbxMondayCompletedTasks.Text = "";
             // 
             // rtbxMondayToDo
             // 
@@ -268,11 +266,11 @@ namespace ToDoList
             // 
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.richTextBox3);
-            this.groupBox2.Controls.Add(this.richTextBox4);
+            this.groupBox2.Controls.Add(this.rtbxTuesdayCompletedTasks);
+            this.groupBox2.Controls.Add(this.rtbxTuesdayToDo);
             this.groupBox2.Location = new System.Drawing.Point(3, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(706, 450);
+            this.groupBox2.Size = new System.Drawing.Size(814, 468);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -294,21 +292,23 @@ namespace ToDoList
             this.label5.TabIndex = 2;
             this.label5.Text = "Task to do: ";
             // 
-            // richTextBox3
+            // rtbxTuesdayCompletedTasks
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(441, 41);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(356, 276);
-            this.richTextBox3.TabIndex = 1;
-            this.richTextBox3.Text = "";
+            this.rtbxTuesdayCompletedTasks.Font = new System.Drawing.Font("Consolas", 9F);
+            this.rtbxTuesdayCompletedTasks.Location = new System.Drawing.Point(441, 41);
+            this.rtbxTuesdayCompletedTasks.Name = "rtbxTuesdayCompletedTasks";
+            this.rtbxTuesdayCompletedTasks.Size = new System.Drawing.Size(335, 276);
+            this.rtbxTuesdayCompletedTasks.TabIndex = 1;
+            this.rtbxTuesdayCompletedTasks.Text = "";
             // 
-            // richTextBox4
+            // rtbxTuesdayToDo
             // 
-            this.richTextBox4.Location = new System.Drawing.Point(22, 41);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(343, 276);
-            this.richTextBox4.TabIndex = 0;
-            this.richTextBox4.Text = "";
+            this.rtbxTuesdayToDo.Font = new System.Drawing.Font("Consolas", 9F);
+            this.rtbxTuesdayToDo.Location = new System.Drawing.Point(22, 41);
+            this.rtbxTuesdayToDo.Name = "rtbxTuesdayToDo";
+            this.rtbxTuesdayToDo.Size = new System.Drawing.Size(343, 276);
+            this.rtbxTuesdayToDo.TabIndex = 0;
+            this.rtbxTuesdayToDo.Text = "";
             // 
             // tpWednesday
             // 
@@ -324,20 +324,20 @@ namespace ToDoList
             // 
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.richTextBox5);
-            this.groupBox3.Controls.Add(this.richTextBox6);
+            this.groupBox3.Controls.Add(this.rtbxWednesdayCompletedTasks);
+            this.groupBox3.Controls.Add(this.rtbxWednesdayToDo);
             this.groupBox3.Location = new System.Drawing.Point(3, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(706, 450);
+            this.groupBox3.Size = new System.Drawing.Size(814, 468);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(442, 18);
+            this.label3.Location = new System.Drawing.Point(437, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(156, 21);
+            this.label3.Size = new System.Drawing.Size(125, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "Completed Tasks: ";
             // 
@@ -350,21 +350,23 @@ namespace ToDoList
             this.label6.TabIndex = 2;
             this.label6.Text = "Task to do: ";
             // 
-            // richTextBox5
+            // rtbxWednesdayCompletedTasks
             // 
-            this.richTextBox5.Location = new System.Drawing.Point(441, 41);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(356, 276);
-            this.richTextBox5.TabIndex = 1;
-            this.richTextBox5.Text = "";
+            this.rtbxWednesdayCompletedTasks.Font = new System.Drawing.Font("Consolas", 9F);
+            this.rtbxWednesdayCompletedTasks.Location = new System.Drawing.Point(441, 41);
+            this.rtbxWednesdayCompletedTasks.Name = "rtbxWednesdayCompletedTasks";
+            this.rtbxWednesdayCompletedTasks.Size = new System.Drawing.Size(335, 276);
+            this.rtbxWednesdayCompletedTasks.TabIndex = 1;
+            this.rtbxWednesdayCompletedTasks.Text = "";
             // 
-            // richTextBox6
+            // rtbxWednesdayToDo
             // 
-            this.richTextBox6.Location = new System.Drawing.Point(22, 41);
-            this.richTextBox6.Name = "richTextBox6";
-            this.richTextBox6.Size = new System.Drawing.Size(299, 276);
-            this.richTextBox6.TabIndex = 0;
-            this.richTextBox6.Text = "";
+            this.rtbxWednesdayToDo.Font = new System.Drawing.Font("Consolas", 9F);
+            this.rtbxWednesdayToDo.Location = new System.Drawing.Point(22, 41);
+            this.rtbxWednesdayToDo.Name = "rtbxWednesdayToDo";
+            this.rtbxWednesdayToDo.Size = new System.Drawing.Size(343, 276);
+            this.rtbxWednesdayToDo.TabIndex = 0;
+            this.rtbxWednesdayToDo.Text = "";
             // 
             // tpThursday
             // 
@@ -380,18 +382,18 @@ namespace ToDoList
             // 
             this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.richTextBox7);
-            this.groupBox4.Controls.Add(this.richTextBox8);
+            this.groupBox4.Controls.Add(this.rtbxThursdayCompletedTasks);
+            this.groupBox4.Controls.Add(this.rtbxThursdayToDo);
             this.groupBox4.Location = new System.Drawing.Point(3, 0);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(706, 450);
+            this.groupBox4.Size = new System.Drawing.Size(814, 468);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(362, 18);
+            this.label7.Location = new System.Drawing.Point(438, 18);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(125, 17);
             this.label7.TabIndex = 3;
@@ -406,21 +408,23 @@ namespace ToDoList
             this.label8.TabIndex = 2;
             this.label8.Text = "Task to do: ";
             // 
-            // richTextBox7
+            // rtbxThursdayCompletedTasks
             // 
-            this.richTextBox7.Location = new System.Drawing.Point(362, 41);
-            this.richTextBox7.Name = "richTextBox7";
-            this.richTextBox7.Size = new System.Drawing.Size(282, 276);
-            this.richTextBox7.TabIndex = 1;
-            this.richTextBox7.Text = "";
+            this.rtbxThursdayCompletedTasks.Font = new System.Drawing.Font("Consolas", 9F);
+            this.rtbxThursdayCompletedTasks.Location = new System.Drawing.Point(441, 41);
+            this.rtbxThursdayCompletedTasks.Name = "rtbxThursdayCompletedTasks";
+            this.rtbxThursdayCompletedTasks.Size = new System.Drawing.Size(335, 276);
+            this.rtbxThursdayCompletedTasks.TabIndex = 1;
+            this.rtbxThursdayCompletedTasks.Text = "";
             // 
-            // richTextBox8
+            // rtbxThursdayToDo
             // 
-            this.richTextBox8.Location = new System.Drawing.Point(19, 41);
-            this.richTextBox8.Name = "richTextBox8";
-            this.richTextBox8.Size = new System.Drawing.Size(299, 276);
-            this.richTextBox8.TabIndex = 0;
-            this.richTextBox8.Text = "";
+            this.rtbxThursdayToDo.Font = new System.Drawing.Font("Consolas", 9F);
+            this.rtbxThursdayToDo.Location = new System.Drawing.Point(22, 41);
+            this.rtbxThursdayToDo.Name = "rtbxThursdayToDo";
+            this.rtbxThursdayToDo.Size = new System.Drawing.Size(343, 276);
+            this.rtbxThursdayToDo.TabIndex = 0;
+            this.rtbxThursdayToDo.Text = "";
             // 
             // tpFriday
             // 
@@ -436,18 +440,18 @@ namespace ToDoList
             // 
             this.groupBox5.Controls.Add(this.label9);
             this.groupBox5.Controls.Add(this.label10);
-            this.groupBox5.Controls.Add(this.richTextBox9);
-            this.groupBox5.Controls.Add(this.richTextBox10);
+            this.groupBox5.Controls.Add(this.rtbxFridayCompletedTasks);
+            this.groupBox5.Controls.Add(this.rtbxFridayToDo);
             this.groupBox5.Location = new System.Drawing.Point(3, 0);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(706, 450);
+            this.groupBox5.Size = new System.Drawing.Size(814, 468);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(362, 18);
+            this.label9.Location = new System.Drawing.Point(439, 18);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(125, 17);
             this.label9.TabIndex = 3;
@@ -462,21 +466,23 @@ namespace ToDoList
             this.label10.TabIndex = 2;
             this.label10.Text = "Task to do: ";
             // 
-            // richTextBox9
+            // rtbxFridayCompletedTasks
             // 
-            this.richTextBox9.Location = new System.Drawing.Point(362, 41);
-            this.richTextBox9.Name = "richTextBox9";
-            this.richTextBox9.Size = new System.Drawing.Size(282, 276);
-            this.richTextBox9.TabIndex = 1;
-            this.richTextBox9.Text = "";
+            this.rtbxFridayCompletedTasks.Font = new System.Drawing.Font("Consolas", 9F);
+            this.rtbxFridayCompletedTasks.Location = new System.Drawing.Point(441, 41);
+            this.rtbxFridayCompletedTasks.Name = "rtbxFridayCompletedTasks";
+            this.rtbxFridayCompletedTasks.Size = new System.Drawing.Size(335, 276);
+            this.rtbxFridayCompletedTasks.TabIndex = 1;
+            this.rtbxFridayCompletedTasks.Text = "";
             // 
-            // richTextBox10
+            // rtbxFridayToDo
             // 
-            this.richTextBox10.Location = new System.Drawing.Point(19, 41);
-            this.richTextBox10.Name = "richTextBox10";
-            this.richTextBox10.Size = new System.Drawing.Size(299, 276);
-            this.richTextBox10.TabIndex = 0;
-            this.richTextBox10.Text = "";
+            this.rtbxFridayToDo.Font = new System.Drawing.Font("Consolas", 9F);
+            this.rtbxFridayToDo.Location = new System.Drawing.Point(22, 41);
+            this.rtbxFridayToDo.Name = "rtbxFridayToDo";
+            this.rtbxFridayToDo.Size = new System.Drawing.Size(343, 276);
+            this.rtbxFridayToDo.TabIndex = 0;
+            this.rtbxFridayToDo.Text = "";
             // 
             // tpSaturday
             // 
@@ -492,18 +498,18 @@ namespace ToDoList
             // 
             this.groupBox6.Controls.Add(this.label11);
             this.groupBox6.Controls.Add(this.label12);
-            this.groupBox6.Controls.Add(this.richTextBox11);
-            this.groupBox6.Controls.Add(this.richTextBox12);
+            this.groupBox6.Controls.Add(this.rtbxSaturdayCompletedTasks);
+            this.groupBox6.Controls.Add(this.rtbxSaturdayToDo);
             this.groupBox6.Location = new System.Drawing.Point(3, 0);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(706, 450);
+            this.groupBox6.Size = new System.Drawing.Size(814, 468);
             this.groupBox6.TabIndex = 1;
             this.groupBox6.TabStop = false;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(362, 18);
+            this.label11.Location = new System.Drawing.Point(438, 18);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(125, 17);
             this.label11.TabIndex = 3;
@@ -518,21 +524,23 @@ namespace ToDoList
             this.label12.TabIndex = 2;
             this.label12.Text = "Task to do: ";
             // 
-            // richTextBox11
+            // rtbxSaturdayCompletedTasks
             // 
-            this.richTextBox11.Location = new System.Drawing.Point(362, 41);
-            this.richTextBox11.Name = "richTextBox11";
-            this.richTextBox11.Size = new System.Drawing.Size(282, 276);
-            this.richTextBox11.TabIndex = 1;
-            this.richTextBox11.Text = "";
+            this.rtbxSaturdayCompletedTasks.Font = new System.Drawing.Font("Consolas", 9F);
+            this.rtbxSaturdayCompletedTasks.Location = new System.Drawing.Point(441, 41);
+            this.rtbxSaturdayCompletedTasks.Name = "rtbxSaturdayCompletedTasks";
+            this.rtbxSaturdayCompletedTasks.Size = new System.Drawing.Size(335, 276);
+            this.rtbxSaturdayCompletedTasks.TabIndex = 1;
+            this.rtbxSaturdayCompletedTasks.Text = "";
             // 
-            // richTextBox12
+            // rtbxSaturdayToDo
             // 
-            this.richTextBox12.Location = new System.Drawing.Point(19, 41);
-            this.richTextBox12.Name = "richTextBox12";
-            this.richTextBox12.Size = new System.Drawing.Size(299, 276);
-            this.richTextBox12.TabIndex = 0;
-            this.richTextBox12.Text = "";
+            this.rtbxSaturdayToDo.Font = new System.Drawing.Font("Consolas", 9F);
+            this.rtbxSaturdayToDo.Location = new System.Drawing.Point(22, 41);
+            this.rtbxSaturdayToDo.Name = "rtbxSaturdayToDo";
+            this.rtbxSaturdayToDo.Size = new System.Drawing.Size(343, 276);
+            this.rtbxSaturdayToDo.TabIndex = 0;
+            this.rtbxSaturdayToDo.Text = "";
             // 
             // btnAddTask
             // 
@@ -592,41 +600,11 @@ namespace ToDoList
             this.lblWellDone.TabIndex = 6;
             this.lblWellDone.Text = "Well Done you have accomplished all your tasks";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(33, 629);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(343, 51);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(1080, 67);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 276);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(452, 629);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(356, 36);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // cfrmToDoList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1220, 768);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1005, 582);
             this.Controls.Add(this.lblWellDone);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -642,7 +620,7 @@ namespace ToDoList
             this.tpSunday.ResumeLayout(false);
             this.grpbxLists.ResumeLayout(false);
             this.grpbxLists.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxProcess)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSunday)).EndInit();
             this.tpMonday.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -689,39 +667,36 @@ namespace ToDoList
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblMonToDo;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtbxMondayCompletedTasks;
         private System.Windows.Forms.RichTextBox rtbxMondayToDo;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RichTextBox richTextBox3;
-        private System.Windows.Forms.RichTextBox richTextBox4;
+        private System.Windows.Forms.RichTextBox rtbxTuesdayCompletedTasks;
+        private System.Windows.Forms.RichTextBox rtbxTuesdayToDo;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RichTextBox richTextBox5;
-        private System.Windows.Forms.RichTextBox richTextBox6;
+        private System.Windows.Forms.RichTextBox rtbxWednesdayCompletedTasks;
+        private System.Windows.Forms.RichTextBox rtbxWednesdayToDo;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RichTextBox richTextBox7;
-        private System.Windows.Forms.RichTextBox richTextBox8;
+        private System.Windows.Forms.RichTextBox rtbxThursdayCompletedTasks;
+        private System.Windows.Forms.RichTextBox rtbxThursdayToDo;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RichTextBox richTextBox9;
-        private System.Windows.Forms.RichTextBox richTextBox10;
+        private System.Windows.Forms.RichTextBox rtbxFridayCompletedTasks;
+        private System.Windows.Forms.RichTextBox rtbxFridayToDo;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.RichTextBox richTextBox11;
-        private System.Windows.Forms.RichTextBox richTextBox12;
-        private System.Windows.Forms.PictureBox pbxProcess;
+        private System.Windows.Forms.RichTextBox rtbxSaturdayCompletedTasks;
+        private System.Windows.Forms.RichTextBox rtbxSaturdayToDo;
+        private System.Windows.Forms.PictureBox pbxSunday;
         private System.Windows.Forms.ProgressBar pbrProgress;
         private System.Windows.Forms.Label lblWellDone;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
     }
 }
 
