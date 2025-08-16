@@ -12,20 +12,24 @@ using System.IO;
 
 namespace ToDoList
 {
-    
+
     public partial class cfrmToDoList : Form
     {
+        private Point fixedRtbTDLocation = new Point(17, 41);
+        private Size fixedRtbTDSize = new Size(371, 276);
+
         public string NewTask;
         public DateTime DueDate;
         private cTaskManagment ManageTask;
         cTaskManagment cManageTask = new cTaskManagment();
         // int tabIndex;
         string sDay;
-       
+
 
         public cfrmToDoList(cTaskManagment _ManageTask)
         {
             InitializeComponent();
+           
             ManageTask = _ManageTask;
             //rtbxSundayToDo.Text = "Task:".PadRight(25)+"Due Date:\n=======================================\n";
             //rtbxSundayCompletedTasks.Text = "Task:\t\t\tDate Done:\n==================================\n";
@@ -34,9 +38,9 @@ namespace ToDoList
 
         private void tcDays_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-           
-            
+            LoadTasksIntoRichTextBox();
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -47,15 +51,15 @@ namespace ToDoList
             //rtbxSundayToDo.Text += "1 done"+ tabIndex.ToString(); Some manual debugging
             InputForm.Show();
             LoadTasksIntoRichTextBox();
-            
-            
-            
+
+
+
         }
-        public  void DisplayTask(string task, DateTime _DueDate)
+        public void DisplayTask(string task, DateTime _DueDate)
         {
             //rtbxSundayToDo.Text += ManageTask.DisplayTask(tcDays.SelectedIndex,task,_DueDate);
             ManageTask.DisplayTask(tcDays.SelectedIndex, task, _DueDate);
-           
+
             LoadTasksIntoRichTextBox();// Ensures rtbx is updated in real time
 
 
@@ -68,7 +72,7 @@ namespace ToDoList
             // int iTxtFileFind = 
             ManageTask.MarkTaskAsDone(sFind);
             LoadTasksIntoRichTextBox();
-           
+
 
 
             // int ifind = rtbxSundayToDo.Find(sFind);
@@ -86,12 +90,34 @@ namespace ToDoList
             RichTextBox[] TaskDoneBoxes = new RichTextBox[2] { rtbxSundayCompletedTasks, rtbxMondayToDo };
             RichTextBox rtbTD = dayBoxes[0];
             RichTextBox rtbCT = dayBoxes[0];
+
+            grpbxLists.SuspendLayout();
+            tcDays.SuspendLayout();
+
+            if (rtbTD==rtbxSundayToDo)
+            {
+
+            }
+            else
+            {
+                  rtbTD.Dock = DockStyle.None;
+                  rtbTD.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+
+                 rtbCT.Dock = DockStyle.None;
+                  rtbCT.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+
+                  rtbTD.Size = new Size(371, 276);
+                 rtbTD.Location = new Point(17, 41);
+                 rtbCT.Size = new Size(359, 276);
+                  rtbCT.Location = new Point(436, 41);
+            }
+
             if (!File.Exists(path))
             {
                 return; // no file yet
             }
-           
-            
+
+
             switch (tcDays.SelectedIndex)
             {
                 case 0:
@@ -137,7 +163,7 @@ namespace ToDoList
             rtbTD.Clear();
             rtbTD.Text = "Task:".PadRight(25) + "Due Date:\n====================================\n";
             rtbCT.Clear();
-            rtbCT.Text = "Task:".PadRight(25)+ "Date Done:\n==================================\n";
+            rtbCT.Text = "Task:".PadRight(25) + "Date Done:\n==================================\n";
             int iLineCount = 0;
             int iTrueCount = 0;
             int iFalseCount = 0;
@@ -151,14 +177,17 @@ namespace ToDoList
 
                         // Remove the "T!" tag before displaying
                         string displayLine = line.Substring(2);
-                        string sTask = displayLine.Substring(0, line.IndexOf('@') - 2);
-                        string sDate = displayLine.Substring(line.IndexOf('@') - 1);
+                        string sTask = displayLine.Substring(0, displayLine.IndexOf('@'));
+                        string sDate = displayLine.Substring(displayLine.IndexOf('@') + 1, displayLine.IndexOf("#") - displayLine.IndexOf("@") - 1);
+
+
+
                         rtbCT.AppendText(sTask.PadRight(25) + sDate + Environment.NewLine);
                         // Apply strikethrough formatting
-                        rtbTD.SelectionStart = rtbxSundayToDo.TextLength; // move cursor to the end of the line
-                        rtbTD.SelectionFont = new Font(rtbxSundayToDo.Font, FontStyle.Strikeout);
+                        rtbTD.SelectionStart = rtbTD.TextLength; // move cursor to the end of the line
+                        rtbTD.SelectionFont = new Font(rtbTD.Font, FontStyle.Strikeout);
                         rtbTD.AppendText(sTask.PadRight(25) + sDate + Environment.NewLine);
-                        rtbTD.SelectionFont = rtbxSundayToDo.Font; // reset to normal for next line
+                        rtbTD.SelectionFont = rtbTD.Font; // reset to normal for next line
                                                                    // iLineCount++;
                         iTrueCount++;
                     }
@@ -168,21 +197,21 @@ namespace ToDoList
                         iFalseCount++;
                         // Remove the "F!" tag before displaying
                         string displayLine = line.Substring(2);
-                        string sTask = displayLine.Substring(0, line.IndexOf('@') - 2);
-                        string sDate = displayLine.Substring(line.IndexOf('@') - 1);
+                        string sTask = displayLine.Substring(0, displayLine.IndexOf('@'));
+                        string sDate = displayLine.Substring(displayLine.IndexOf('@') + 1, displayLine.IndexOf("#") - displayLine.IndexOf("@") - 1);
                         // Display normally
-                        rtbTD.SelectionFont = new Font(rtbxSundayToDo.Font, FontStyle.Regular);
+                        rtbTD.SelectionFont = new Font(rtbTD.Font, FontStyle.Regular);
                         rtbTD.AppendText(sTask.PadRight(25) + sDate + Environment.NewLine);
                     }
                 }
-               
-               
-               
-                
+
+
+
+
 
 
             }
-            if (iLineCount==0)
+            if (iLineCount == 0)
             {
                 iLineCount = 1;
             }
@@ -223,7 +252,7 @@ namespace ToDoList
                 }
 
             }
-            else if (dProgress==50)
+            else if (dProgress == 50)
             {
                 pbrProgress.Value = (int)dProgress;
                 string imagePath = Path.Combine(Application.StartupPath, "images", "chill.jpg");
@@ -234,7 +263,7 @@ namespace ToDoList
                     pbxProcess.SizeMode = PictureBoxSizeMode.Zoom; // keeps aspect ratio
                     pbxProcess.AutoSize = false; // prevents resizing
                 }
-                
+
             }
             else if (dProgress == 0)
             {
@@ -266,6 +295,11 @@ namespace ToDoList
         {
             ManageTask.DeleteTask(Interaction.InputBox("What task are you deleting:", "Delete a task"));
             LoadTasksIntoRichTextBox();
+        }
+
+        private void cfrmToDoList_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
