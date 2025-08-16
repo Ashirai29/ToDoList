@@ -10,7 +10,7 @@ namespace ToDoList
     public class cTaskManagment
     {
         string sDay;
-        string path = @"C:\Users\AAHla\Documents\CraftCode Studios\To Do List\ToDoList\TaskTracker.txt";
+        string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "TaskTracker.txt");
         //StreamWriter swTaskLists = new StreamWriter(@"C:\Users\AAHla\Documents\CraftCode Studios\To Do List\ToDoList\TaskTracker.txt", true);
         //StreamReader srTaskLists = new StreamReader(@"C:\Users\AAHla\Documents\CraftCode Studios\To Do List\ToDoList\TaskTracker.txt", true);
         public  void AddRecord(string _Task, DateTime _DueDate, Boolean _bFlag, int iDay)
@@ -134,7 +134,7 @@ namespace ToDoList
             {
                 //string path = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), @"../../Infor.txt"));
                 // string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"C:\Users\AAHla\Documents\CraftCode Studios\To Do List\ToDoList.txt");
-                // string path = @"C:\Users\AAHla\Documents\CraftCode Studios\To Do List\ToDoList\TaskTracker.txt";
+                //path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "TaskTracker.txt");
                 if (!File.Exists(path))
                 {
                     using (File.Create(path)) { }

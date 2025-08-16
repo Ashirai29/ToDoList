@@ -126,10 +126,10 @@ namespace ToDoList
             this.tcDays.Controls.Add(this.tpThursday);
             this.tcDays.Controls.Add(this.tpFriday);
             this.tcDays.Controls.Add(this.tpSaturday);
-            this.tcDays.Location = new System.Drawing.Point(4, 1);
+            this.tcDays.Location = new System.Drawing.Point(0, 2);
             this.tcDays.Name = "tcDays";
             this.tcDays.SelectedIndex = 0;
-            this.tcDays.Size = new System.Drawing.Size(828, 500);
+            this.tcDays.Size = new System.Drawing.Size(832, 499);
             this.tcDays.TabIndex = 0;
             this.tcDays.SelectedIndexChanged += new System.EventHandler(this.tcDays_SelectedIndexChanged);
             // 
@@ -139,7 +139,7 @@ namespace ToDoList
             this.tpSunday.Location = new System.Drawing.Point(4, 25);
             this.tpSunday.Name = "tpSunday";
             this.tpSunday.Padding = new System.Windows.Forms.Padding(3);
-            this.tpSunday.Size = new System.Drawing.Size(820, 471);
+            this.tpSunday.Size = new System.Drawing.Size(824, 470);
             this.tpSunday.TabIndex = 0;
             this.tpSunday.Text = "Sunday";
             this.tpSunday.UseVisualStyleBackColor = true;
@@ -745,6 +745,7 @@ namespace ToDoList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(994, 588);
             this.Controls.Add(this.lblWellDone);
             this.Controls.Add(this.button5);

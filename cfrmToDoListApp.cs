@@ -242,7 +242,7 @@ namespace ToDoList
                 pbr.Value = 100;
                 //MessageBox.Show($"True: {iTrueCount}, Total: {iLineCount}, Progress: {dProgress}");// Was used for debbuging purposes, iTrueCount& iLineCount were constantly 
                 string imagePath = Path.Combine(Application.StartupPath, "images", "missionDone.jpg");
-                lblWellDone.Visible = true;
+                lblWellDone.Text = "Well Done you have accomplished all your tasks";
                 if (File.Exists(imagePath))
                 {
                     pbx.Image = Image.FromFile(imagePath);
@@ -259,7 +259,7 @@ namespace ToDoList
             {
                 pbr.Value = 99;
                 string imagePath = Path.Combine(Application.StartupPath, "images", "happy.jpg");
-                lblWellDone.Visible = false;
+                lblWellDone.Text = "Almost there, Keep it up";
                 if (File.Exists(imagePath))
                 {
                     pbx.Image = Image.FromFile(imagePath);
@@ -276,7 +276,7 @@ namespace ToDoList
             {
                 pbr.Value = (int)dProgress;
                 string imagePath = Path.Combine(Application.StartupPath, "images", "chill.jpg");
-                lblWellDone.Visible = false;
+                lblWellDone.Text = "A 50/50 split, break the balance.";
                 if (File.Exists(imagePath))
                 {
                     pbx.Image = Image.FromFile(imagePath);
@@ -289,7 +289,7 @@ namespace ToDoList
             {
                 pbr.Value = (int)dProgress;
                 string imagePath = Path.Combine(Application.StartupPath, "images", "sleepy.jpg");
-                lblWellDone.Visible = false;
+                lblWellDone.Text = "Wow! Its either rest day or you just lazy.";
                 if (File.Exists(imagePath))
                 {
                     pbx.Image = Image.FromFile(imagePath);
@@ -301,7 +301,11 @@ namespace ToDoList
             {
                 pbr.Value = (int)dProgress;
                 string imagePath = Path.Combine(Application.StartupPath, "images", "happy.jpg");
-                lblWellDone.Visible = false;
+                lblWellDone.Text = "Great progress";
+                if (dProgress<50)
+                {
+                    lblWellDone.Text = "Decent progress";
+                }
                 if (File.Exists(imagePath))
                 {
                     pbx.Image = Image.FromFile(imagePath);
