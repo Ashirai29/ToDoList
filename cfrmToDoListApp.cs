@@ -91,6 +91,11 @@ namespace ToDoList
             RichTextBox rtbTD = dayBoxes[0];
             RichTextBox rtbCT = dayBoxes[0];
 
+            PictureBox[] pictureBoxes = new PictureBox[7] {pbxSunday,pbxMonday,pbxTuesday,pbxWednesday,pbxThursday,pbxFriday,pbxSaturday };
+            ProgressBar[] progressBars = new ProgressBar[7] { pbrSunday, pbrMonday, pbrTuesday, pbrWednesday, pbrThursday, pbrFriday, pbrSaturday };
+            PictureBox pbx = pictureBoxes[0];
+            ProgressBar pbr = progressBars[0];
+
             grpbxLists.SuspendLayout();
             tcDays.SuspendLayout();
 
@@ -124,36 +129,50 @@ namespace ToDoList
                     sDay = "Sunday";
                     rtbTD = dayBoxes[0];
                     rtbCT = TaskDoneBoxes[0];
+                    pbr = progressBars[0];
+                    pbx = pictureBoxes[0];
                     break;
                 case 1:
                     sDay = "Monday";
                     rtbTD = dayBoxes[1];
                     rtbCT = TaskDoneBoxes[1];
+                    pbr = progressBars[1];
+                    pbx = pictureBoxes[1];
                     break;
                 case 2:
                     sDay = "Tuesday";
                     rtbTD = dayBoxes[2];
                     rtbCT = TaskDoneBoxes[2];
+                    pbr = progressBars[2];
+                    pbx = pictureBoxes[2];
                     break;
                 case 3:
                     sDay = "Wednesday";
                     rtbTD = dayBoxes[3];
                     rtbCT = TaskDoneBoxes[3];
+                    pbr = progressBars[3];
+                    pbx = pictureBoxes[3];
                     break;
                 case 4:
                     sDay = "Thursday";
                     rtbTD = dayBoxes[4];
                     rtbCT = TaskDoneBoxes[4];
+                    pbr = progressBars[4];
+                    pbx = pictureBoxes[4];
                     break;
                 case 5:
                     sDay = "Friday";
                     rtbTD = dayBoxes[5];
                     rtbCT = TaskDoneBoxes[5];
+                    pbr = progressBars[5];
+                    pbx = pictureBoxes[5];
                     break;
                 case 6:
                     sDay = "Saturday";
                     rtbTD = dayBoxes[6];
                     rtbCT = TaskDoneBoxes[6];
+                    pbr = progressBars[6];
+                    pbx = pictureBoxes[6];
                     break;
 
             }
@@ -219,15 +238,15 @@ namespace ToDoList
 
             if (dProgress == 100)
             {
-                pbrProgress.Value = 100;
+                pbr.Value = 100;
                 //MessageBox.Show($"True: {iTrueCount}, Total: {iLineCount}, Progress: {dProgress}");// Was used for debbuging purposes, iTrueCount& iLineCount were constantly 
                 string imagePath = Path.Combine(Application.StartupPath, "images", "missionDone.jpg");
-
+                lblWellDone.Visible = true;
                 if (File.Exists(imagePath))
                 {
-                    pbxSunday.Image = Image.FromFile(imagePath);
-                    pbxSunday.SizeMode = PictureBoxSizeMode.Zoom; // keeps aspect ratio
-                    pbxSunday.AutoSize = false; // prevents resizing
+                    pbx.Image = Image.FromFile(imagePath);
+                    pbx.SizeMode = PictureBoxSizeMode.Zoom; // keeps aspect ratio
+                    pbx.AutoSize = false; // prevents resizing
                 }
                 else
                 {
@@ -237,14 +256,14 @@ namespace ToDoList
             }
             else if (dProgress > 99)
             {
-                pbrProgress.Value = 99;
+                pbr.Value = 99;
                 string imagePath = Path.Combine(Application.StartupPath, "images", "happy.jpg");
-
+                lblWellDone.Visible = false;
                 if (File.Exists(imagePath))
                 {
-                    pbxSunday.Image = Image.FromFile(imagePath);
-                    pbxSunday.SizeMode = PictureBoxSizeMode.Zoom; // keeps aspect ratio
-                    pbxSunday.AutoSize = false; // prevents resizing
+                    pbx.Image = Image.FromFile(imagePath);
+                    pbx.SizeMode = PictureBoxSizeMode.Zoom; // keeps aspect ratio
+                    pbx.AutoSize = false; // prevents resizing
                 }
                 else
                 {
@@ -254,39 +273,39 @@ namespace ToDoList
             }
             else if (dProgress == 50)
             {
-                pbrProgress.Value = (int)dProgress;
+                pbr.Value = (int)dProgress;
                 string imagePath = Path.Combine(Application.StartupPath, "images", "chill.jpg");
-
+                lblWellDone.Visible = false;
                 if (File.Exists(imagePath))
                 {
-                    pbxSunday.Image = Image.FromFile(imagePath);
-                    pbxSunday.SizeMode = PictureBoxSizeMode.Zoom; // keeps aspect ratio
-                    pbxSunday.AutoSize = false; // prevents resizing
+                    pbx.Image = Image.FromFile(imagePath);
+                    pbx.SizeMode = PictureBoxSizeMode.Zoom; // keeps aspect ratio
+                    pbx.AutoSize = false; // prevents resizing
                 }
 
             }
             else if (dProgress == 0)
             {
-                pbrProgress.Value = (int)dProgress;
+                pbr.Value = (int)dProgress;
                 string imagePath = Path.Combine(Application.StartupPath, "images", "sleepy.jpg");
-
+                lblWellDone.Visible = false;
                 if (File.Exists(imagePath))
                 {
-                    pbxSunday.Image = Image.FromFile(imagePath);
-                    pbxSunday.SizeMode = PictureBoxSizeMode.Zoom; // keeps aspect ratio
-                    pbxSunday.AutoSize = false; // prevents resizing
+                    pbx.Image = Image.FromFile(imagePath);
+                    pbx.SizeMode = PictureBoxSizeMode.Zoom; // keeps aspect ratio
+                    pbx.AutoSize = false; // prevents resizing
                 }
             }
             else
             {
-                pbrProgress.Value = (int)dProgress;
+                pbr.Value = (int)dProgress;
                 string imagePath = Path.Combine(Application.StartupPath, "images", "happy.jpg");
-
+                lblWellDone.Visible = false;
                 if (File.Exists(imagePath))
                 {
-                    pbxSunday.Image = Image.FromFile(imagePath);
-                    pbxSunday.SizeMode = PictureBoxSizeMode.Zoom; // keeps aspect ratio
-                    pbxSunday.AutoSize = false; // prevents resizing
+                    pbx.Image = Image.FromFile(imagePath);
+                    pbx.SizeMode = PictureBoxSizeMode.Zoom; // keeps aspect ratio
+                    pbx.AutoSize = false; // prevents resizing
                 }
             }
         }

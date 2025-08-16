@@ -29,47 +29,60 @@ namespace ToDoList
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cfrmToDoList));
             this.tcDays = new System.Windows.Forms.TabControl();
             this.tpSunday = new System.Windows.Forms.TabPage();
             this.grpbxLists = new System.Windows.Forms.GroupBox();
             this.pbxSunday = new System.Windows.Forms.PictureBox();
-            this.pbrProgress = new System.Windows.Forms.ProgressBar();
+            this.pbrSunday = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTaskToDo = new System.Windows.Forms.Label();
             this.rtbxSundayCompletedTasks = new System.Windows.Forms.RichTextBox();
             this.rtbxSundayToDo = new System.Windows.Forms.RichTextBox();
             this.tpMonday = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pbrMonday = new System.Windows.Forms.ProgressBar();
+            this.pbxMonday = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblMonToDo = new System.Windows.Forms.Label();
             this.rtbxMondayCompletedTasks = new System.Windows.Forms.RichTextBox();
             this.rtbxMondayToDo = new System.Windows.Forms.RichTextBox();
             this.tpTuesday = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pbrTuesday = new System.Windows.Forms.ProgressBar();
+            this.pbxTuesday = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.rtbxTuesdayCompletedTasks = new System.Windows.Forms.RichTextBox();
             this.rtbxTuesdayToDo = new System.Windows.Forms.RichTextBox();
             this.tpWednesday = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pbrWednesday = new System.Windows.Forms.ProgressBar();
+            this.pbxWednesday = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.rtbxWednesdayCompletedTasks = new System.Windows.Forms.RichTextBox();
             this.rtbxWednesdayToDo = new System.Windows.Forms.RichTextBox();
             this.tpThursday = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.pbrThursday = new System.Windows.Forms.ProgressBar();
+            this.pbxThursday = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.rtbxThursdayCompletedTasks = new System.Windows.Forms.RichTextBox();
             this.rtbxThursdayToDo = new System.Windows.Forms.RichTextBox();
             this.tpFriday = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.pbrFriday = new System.Windows.Forms.ProgressBar();
+            this.pbxFriday = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.rtbxFridayCompletedTasks = new System.Windows.Forms.RichTextBox();
             this.rtbxFridayToDo = new System.Windows.Forms.RichTextBox();
             this.tpSaturday = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.pbrSaturday = new System.Windows.Forms.ProgressBar();
+            this.pbxSaturday = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.rtbxSaturdayCompletedTasks = new System.Windows.Forms.RichTextBox();
@@ -86,16 +99,22 @@ namespace ToDoList
             ((System.ComponentModel.ISupportInitialize)(this.pbxSunday)).BeginInit();
             this.tpMonday.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxMonday)).BeginInit();
             this.tpTuesday.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxTuesday)).BeginInit();
             this.tpWednesday.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxWednesday)).BeginInit();
             this.tpThursday.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxThursday)).BeginInit();
             this.tpFriday.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFriday)).BeginInit();
             this.tpSaturday.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSaturday)).BeginInit();
             this.SuspendLayout();
             // 
             // tcDays
@@ -128,7 +147,7 @@ namespace ToDoList
             // grpbxLists
             // 
             this.grpbxLists.Controls.Add(this.pbxSunday);
-            this.grpbxLists.Controls.Add(this.pbrProgress);
+            this.grpbxLists.Controls.Add(this.pbrSunday);
             this.grpbxLists.Controls.Add(this.label1);
             this.grpbxLists.Controls.Add(this.lblTaskToDo);
             this.grpbxLists.Controls.Add(this.rtbxSundayCompletedTasks);
@@ -141,7 +160,7 @@ namespace ToDoList
             // 
             // pbxSunday
             // 
-            this.pbxSunday.Image = global::ToDoList.Properties.Resources.sleepy1;
+            this.pbxSunday.Image = ((System.Drawing.Image)(resources.GetObject("pbxSunday.Image")));
             this.pbxSunday.Location = new System.Drawing.Point(615, 323);
             this.pbxSunday.Name = "pbxSunday";
             this.pbxSunday.Size = new System.Drawing.Size(124, 126);
@@ -149,13 +168,13 @@ namespace ToDoList
             this.pbxSunday.TabIndex = 5;
             this.pbxSunday.TabStop = false;
             // 
-            // pbrProgress
+            // pbrSunday
             // 
-            this.pbrProgress.Location = new System.Drawing.Point(17, 375);
-            this.pbrProgress.Name = "pbrProgress";
-            this.pbrProgress.Size = new System.Drawing.Size(535, 37);
-            this.pbrProgress.TabIndex = 4;
-            this.pbrProgress.Value = 99;
+            this.pbrSunday.Location = new System.Drawing.Point(17, 375);
+            this.pbrSunday.Name = "pbrSunday";
+            this.pbrSunday.Size = new System.Drawing.Size(535, 37);
+            this.pbrSunday.TabIndex = 4;
+            this.pbrSunday.Value = 99;
             // 
             // label1
             // 
@@ -206,6 +225,8 @@ namespace ToDoList
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.pbrMonday);
+            this.groupBox1.Controls.Add(this.pbxMonday);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.lblMonToDo);
             this.groupBox1.Controls.Add(this.rtbxMondayCompletedTasks);
@@ -215,6 +236,24 @@ namespace ToDoList
             this.groupBox1.Size = new System.Drawing.Size(821, 471);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // pbrMonday
+            // 
+            this.pbrMonday.Location = new System.Drawing.Point(19, 375);
+            this.pbrMonday.Name = "pbrMonday";
+            this.pbrMonday.Size = new System.Drawing.Size(534, 37);
+            this.pbrMonday.TabIndex = 7;
+            this.pbrMonday.Value = 99;
+            // 
+            // pbxMonday
+            // 
+            this.pbxMonday.Image = ((System.Drawing.Image)(resources.GetObject("pbxMonday.Image")));
+            this.pbxMonday.Location = new System.Drawing.Point(617, 323);
+            this.pbxMonday.Name = "pbxMonday";
+            this.pbxMonday.Size = new System.Drawing.Size(123, 126);
+            this.pbxMonday.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxMonday.TabIndex = 6;
+            this.pbxMonday.TabStop = false;
             // 
             // label2
             // 
@@ -264,6 +303,8 @@ namespace ToDoList
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.pbrTuesday);
+            this.groupBox2.Controls.Add(this.pbxTuesday);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.rtbxTuesdayCompletedTasks);
@@ -273,6 +314,24 @@ namespace ToDoList
             this.groupBox2.Size = new System.Drawing.Size(814, 468);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            // 
+            // pbrTuesday
+            // 
+            this.pbrTuesday.Location = new System.Drawing.Point(19, 375);
+            this.pbrTuesday.Name = "pbrTuesday";
+            this.pbrTuesday.Size = new System.Drawing.Size(534, 37);
+            this.pbrTuesday.TabIndex = 8;
+            this.pbrTuesday.Value = 99;
+            // 
+            // pbxTuesday
+            // 
+            this.pbxTuesday.Image = ((System.Drawing.Image)(resources.GetObject("pbxTuesday.Image")));
+            this.pbxTuesday.Location = new System.Drawing.Point(617, 323);
+            this.pbxTuesday.Name = "pbxTuesday";
+            this.pbxTuesday.Size = new System.Drawing.Size(123, 126);
+            this.pbxTuesday.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxTuesday.TabIndex = 7;
+            this.pbxTuesday.TabStop = false;
             // 
             // label4
             // 
@@ -322,6 +381,8 @@ namespace ToDoList
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.pbrWednesday);
+            this.groupBox3.Controls.Add(this.pbxWednesday);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.rtbxWednesdayCompletedTasks);
@@ -331,6 +392,24 @@ namespace ToDoList
             this.groupBox3.Size = new System.Drawing.Size(814, 468);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
+            // 
+            // pbrWednesday
+            // 
+            this.pbrWednesday.Location = new System.Drawing.Point(19, 375);
+            this.pbrWednesday.Name = "pbrWednesday";
+            this.pbrWednesday.Size = new System.Drawing.Size(534, 37);
+            this.pbrWednesday.TabIndex = 9;
+            this.pbrWednesday.Value = 99;
+            // 
+            // pbxWednesday
+            // 
+            this.pbxWednesday.Image = ((System.Drawing.Image)(resources.GetObject("pbxWednesday.Image")));
+            this.pbxWednesday.Location = new System.Drawing.Point(617, 323);
+            this.pbxWednesday.Name = "pbxWednesday";
+            this.pbxWednesday.Size = new System.Drawing.Size(123, 126);
+            this.pbxWednesday.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxWednesday.TabIndex = 8;
+            this.pbxWednesday.TabStop = false;
             // 
             // label3
             // 
@@ -380,6 +459,8 @@ namespace ToDoList
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.pbrThursday);
+            this.groupBox4.Controls.Add(this.pbxThursday);
             this.groupBox4.Controls.Add(this.label7);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.rtbxThursdayCompletedTasks);
@@ -389,6 +470,24 @@ namespace ToDoList
             this.groupBox4.Size = new System.Drawing.Size(814, 468);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
+            // 
+            // pbrThursday
+            // 
+            this.pbrThursday.Location = new System.Drawing.Point(19, 375);
+            this.pbrThursday.Name = "pbrThursday";
+            this.pbrThursday.Size = new System.Drawing.Size(534, 37);
+            this.pbrThursday.TabIndex = 9;
+            this.pbrThursday.Value = 99;
+            // 
+            // pbxThursday
+            // 
+            this.pbxThursday.Image = ((System.Drawing.Image)(resources.GetObject("pbxThursday.Image")));
+            this.pbxThursday.Location = new System.Drawing.Point(617, 323);
+            this.pbxThursday.Name = "pbxThursday";
+            this.pbxThursday.Size = new System.Drawing.Size(123, 126);
+            this.pbxThursday.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxThursday.TabIndex = 8;
+            this.pbxThursday.TabStop = false;
             // 
             // label7
             // 
@@ -438,6 +537,8 @@ namespace ToDoList
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.pbrFriday);
+            this.groupBox5.Controls.Add(this.pbxFriday);
             this.groupBox5.Controls.Add(this.label9);
             this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Controls.Add(this.rtbxFridayCompletedTasks);
@@ -447,6 +548,24 @@ namespace ToDoList
             this.groupBox5.Size = new System.Drawing.Size(814, 468);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
+            // 
+            // pbrFriday
+            // 
+            this.pbrFriday.Location = new System.Drawing.Point(19, 375);
+            this.pbrFriday.Name = "pbrFriday";
+            this.pbrFriday.Size = new System.Drawing.Size(534, 37);
+            this.pbrFriday.TabIndex = 9;
+            this.pbrFriday.Value = 99;
+            // 
+            // pbxFriday
+            // 
+            this.pbxFriday.Image = ((System.Drawing.Image)(resources.GetObject("pbxFriday.Image")));
+            this.pbxFriday.Location = new System.Drawing.Point(617, 323);
+            this.pbxFriday.Name = "pbxFriday";
+            this.pbxFriday.Size = new System.Drawing.Size(123, 126);
+            this.pbxFriday.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxFriday.TabIndex = 8;
+            this.pbxFriday.TabStop = false;
             // 
             // label9
             // 
@@ -496,6 +615,8 @@ namespace ToDoList
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.pbrSaturday);
+            this.groupBox6.Controls.Add(this.pbxSaturday);
             this.groupBox6.Controls.Add(this.label11);
             this.groupBox6.Controls.Add(this.label12);
             this.groupBox6.Controls.Add(this.rtbxSaturdayCompletedTasks);
@@ -505,6 +626,24 @@ namespace ToDoList
             this.groupBox6.Size = new System.Drawing.Size(814, 468);
             this.groupBox6.TabIndex = 1;
             this.groupBox6.TabStop = false;
+            // 
+            // pbrSaturday
+            // 
+            this.pbrSaturday.Location = new System.Drawing.Point(19, 375);
+            this.pbrSaturday.Name = "pbrSaturday";
+            this.pbrSaturday.Size = new System.Drawing.Size(534, 37);
+            this.pbrSaturday.TabIndex = 9;
+            this.pbrSaturday.Value = 99;
+            // 
+            // pbxSaturday
+            // 
+            this.pbxSaturday.Image = ((System.Drawing.Image)(resources.GetObject("pbxSaturday.Image")));
+            this.pbxSaturday.Location = new System.Drawing.Point(617, 323);
+            this.pbxSaturday.Name = "pbxSaturday";
+            this.pbxSaturday.Size = new System.Drawing.Size(123, 126);
+            this.pbxSaturday.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxSaturday.TabIndex = 8;
+            this.pbxSaturday.TabStop = false;
             // 
             // label11
             // 
@@ -604,7 +743,7 @@ namespace ToDoList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1005, 582);
+            this.ClientSize = new System.Drawing.Size(994, 588);
             this.Controls.Add(this.lblWellDone);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -624,21 +763,27 @@ namespace ToDoList
             this.tpMonday.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxMonday)).EndInit();
             this.tpTuesday.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxTuesday)).EndInit();
             this.tpWednesday.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxWednesday)).EndInit();
             this.tpThursday.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxThursday)).EndInit();
             this.tpFriday.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFriday)).EndInit();
             this.tpSaturday.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSaturday)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -695,8 +840,20 @@ namespace ToDoList
         private System.Windows.Forms.RichTextBox rtbxSaturdayCompletedTasks;
         private System.Windows.Forms.RichTextBox rtbxSaturdayToDo;
         private System.Windows.Forms.PictureBox pbxSunday;
-        private System.Windows.Forms.ProgressBar pbrProgress;
+        private System.Windows.Forms.ProgressBar pbrSunday;
         private System.Windows.Forms.Label lblWellDone;
+        private System.Windows.Forms.PictureBox pbxMonday;
+        private System.Windows.Forms.PictureBox pbxTuesday;
+        private System.Windows.Forms.PictureBox pbxWednesday;
+        private System.Windows.Forms.PictureBox pbxThursday;
+        private System.Windows.Forms.PictureBox pbxFriday;
+        private System.Windows.Forms.PictureBox pbxSaturday;
+        private System.Windows.Forms.ProgressBar pbrMonday;
+        private System.Windows.Forms.ProgressBar pbrTuesday;
+        private System.Windows.Forms.ProgressBar pbrThursday;
+        private System.Windows.Forms.ProgressBar pbrFriday;
+        private System.Windows.Forms.ProgressBar pbrSaturday;
+        private System.Windows.Forms.ProgressBar pbrWednesday;
     }
 }
 
