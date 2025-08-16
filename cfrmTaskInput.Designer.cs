@@ -29,6 +29,7 @@ namespace ToDoList
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cfrmTaskInput));
             this.dtpDueDate = new System.Windows.Forms.DateTimePicker();
             this.lblTasktoAdd = new System.Windows.Forms.Label();
             this.lblDueDate = new System.Windows.Forms.Label();
@@ -59,7 +60,7 @@ namespace ToDoList
             this.lblDueDate.AutoSize = true;
             this.lblDueDate.Location = new System.Drawing.Point(63, 158);
             this.lblDueDate.Name = "lblDueDate";
-            this.lblDueDate.Size = new System.Drawing.Size(90, 21);
+            this.lblDueDate.Size = new System.Drawing.Size(72, 17);
             this.lblDueDate.TabIndex = 2;
             this.lblDueDate.Text = "Due Date:";
             // 
@@ -112,6 +113,7 @@ namespace ToDoList
             this.Controls.Add(this.lblDueDate);
             this.Controls.Add(this.lblTasktoAdd);
             this.Controls.Add(this.dtpDueDate);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "cfrmTaskInput";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Task";

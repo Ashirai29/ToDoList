@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ToDoList")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("TaskMate")]
+[assembly: AssemblyDescription("A simple task management tool for organizing and tracking tasks. Developed by Ashley Hlatshwayo.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("CraftCode Studios")]
 [assembly: AssemblyProduct("ToDoList")]
-[assembly: AssemblyCopyright("Copyright ©  2025")]
+[assembly: AssemblyCopyright("Copyright © 2025 CraftCode Studios")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

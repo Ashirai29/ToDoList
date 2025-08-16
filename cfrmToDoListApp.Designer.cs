@@ -719,6 +719,7 @@ namespace ToDoList
             this.button4.TabIndex = 4;
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Visible = false;
             // 
             // button5
             // 
@@ -728,6 +729,7 @@ namespace ToDoList
             this.button5.TabIndex = 5;
             this.button5.Text = "button5";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Visible = false;
             // 
             // lblWellDone
             // 
@@ -751,9 +753,10 @@ namespace ToDoList
             this.Controls.Add(this.btnTaskDone);
             this.Controls.Add(this.btnAddTask);
             this.Controls.Add(this.tcDays);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "cfrmToDoList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "What To DO";
+            this.Text = "TaskMate";
             this.Load += new System.EventHandler(this.cfrmToDoList_Load);
             this.tcDays.ResumeLayout(false);
             this.tpSunday.ResumeLayout(false);
