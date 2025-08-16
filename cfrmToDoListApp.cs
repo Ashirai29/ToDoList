@@ -85,7 +85,8 @@ namespace ToDoList
         }
         public void LoadTasksIntoRichTextBox()
         {
-            string path = @"C:\Users\AAHla\Documents\CraftCode Studios\To Do List\ToDoList\TaskTracker.txt";
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "TaskTracker.txt");
+
             RichTextBox[] dayBoxes = new RichTextBox[7] { rtbxSundayToDo, rtbxMondayToDo, rtbxTuesdayToDo, rtbxWednesdayToDo, rtbxThursdayToDo, rtbxFridayToDo, rtbxSaturdayToDo };
             RichTextBox[] TaskDoneBoxes = new RichTextBox[7] { rtbxSundayCompletedTasks, rtbxMondayCompletedTasks,rtbxTuesdayCompletedTasks,rtbxWednesdayCompletedTasks,rtbxThursdayCompletedTasks,rtbxFridayCompletedTasks,rtbxSaturdayCompletedTasks };
             RichTextBox rtbTD = dayBoxes[0];
